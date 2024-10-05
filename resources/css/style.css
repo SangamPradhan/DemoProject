@@ -1,0 +1,129 @@
+/* General Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+.navbar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-header a.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar-header a.navbar-brand p {
+    margin-left: 10px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar-header button.navbar-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-collapse {
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-nav li {
+    position: relative;
+}
+
+.navbar-nav li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav li a:hover {
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+/* Dropdown Menu */
+.navbar-nav li.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 0;
+    width: 150px;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 8px 15px;
+    color: #333;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Mobile Responsive Menu */
+@media (max-width: 768px) {
+    .navbar-header button.navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse {
+        display: none;
+        flex-direction: column;
+        background-color: #f8f9fa;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .navbar-collapse.show {
+        display: flex;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .navbar-nav li a {
+        padding: 12px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+    }
+}
